@@ -36,9 +36,11 @@ for X in range (5):
     else:
         print("turn done")
         if board [x][y]=="O":
+            z=z+1
             print("spot taken")
         else:
             board [x][y]="X"
+            z=z+1
     for j in range (3):
         for i in range (3):
             x=print(board [i][j], end=" ")
@@ -70,13 +72,18 @@ for X in range (5):
     x=int (input("which row do you want to place a piece in?"))
     y=int (input("which column do you want to place a piece in?"))       
     if x > 2 or y > 2 or x and y > 2:
-        print("you are going out of bounds. select an integer between 0 and 2.")
+        print("you are going out of bounds. select an integer between 0 and 2. Enter a new (x, y)")
+        x=int (input("which row do you want to place a piece in?"))
+        y=int (input("which column do you want to place a piece in?"))
+    print("turn done")
+    if board [x][y]=="X":
+        print("spot taken. Enter a new (x, y)")
+        x=int (input("which row do you want to place a piece in?"))
+        y=int (input("which column do you want to place a piece in?"))
     else:
-        print("turn done")
-        if board [x][y]=="X":
-            print("spot taken")
-        else:
-            board [x][y]="O"
-    if z==9:
+        board [x][y]="O"
+    print(z)
+    if z==5:
         print("draw")
         break
+    
