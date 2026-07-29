@@ -86,4 +86,3 @@ for X in range (5):
     if z==5:
         print("draw")
         break
-    
