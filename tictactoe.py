@@ -6,28 +6,28 @@ for X in range (5):
             x=print(board [i][j], end=" ")
         print()
     if board [0][0]=="O" and board [1][1]=="O" and board [2][2]=="O":
-        print ("you won!")
+        win()
         break
     if board [0][0]=="O" and board [0][1]=="O" and board [0][2]=="O":
-        print ("you won!")
+        win()
         break
     if board [0][0]=="O" and board [1][0]=="O" and board [2][0]=="O":
-        print ("you won!")
+        win()
         break
     if board [0][2]=="O" and board [1][1]=="O" and board [2][0]=="O":
-        print ("you won!")
+        win()
         break
     if board [1][0]=="O" and board [1][1]=="O" and board [1][2]=="O":
-        print ("you won!")
+        win()
         break
     if board [2][0]=="O" and board [2][1]=="O" and board [2][2]=="O":
-        print ("you won!")
+        win()
         break
     if board [0][2]=="O" and board [1][2]=="O" and board [2][2]=="O":
-        print ("you won!")
+        win()
         break
     if board [0][1]=="O" and board [1][1]=="O" and board [2][1]=="O":
-        print ("you won!")
+        win()
         break
     x=int (input("which row do you want to place a piece in?"))
     y=int (input("which column do you want to place a piece in?"))
@@ -46,28 +46,28 @@ for X in range (5):
             x=print(board [i][j], end=" ")
         print()
     if board [0][0]=="X" and board [1][1]=="X" and board [2][2]=="X":
-        print ("you won!")
+        win()
         break
     if board [0][0]=="X" and board [0][1]=="X" and board [0][2]=="X":
-        print ("you won!")
+        win()
         break
     if board [0][0]=="X" and board [1][0]=="X" and board [2][0]=="X":
-        print ("you won!")
+        win()
         break
     if board [2][2]=="X" and board [1][1]=="X" and board [0][0]=="X":
-        print ("you won!")
+        win()
         break
     if board [1][0]=="X" and board [1][1]=="X" and board [1][2]=="X":
-        print ("you won!")
+        win()
         break
     if board [2][0]=="X" and board [2][1]=="X" and board [2][2]=="X":
-        print ("you won!")
+        win()
         break
     if board [0][2]=="X" and board [1][2]=="X" and board [2][2]=="X":
-        print ("you won!")
+        win()
         break
     if board [0][1]=="X" and board [1][1]=="X" and board [2][1]=="X":
-        print ("you won!")
+        win()
         break
     x=int (input("which row do you want to place a piece in?"))
     y=int (input("which column do you want to place a piece in?"))       
@@ -86,3 +86,5 @@ for X in range (5):
     if z==5:
         print("draw")
         break
+    def win():
+        print ("you won")
